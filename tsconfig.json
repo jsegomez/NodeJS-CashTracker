@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // ==== Destino y módulos ====
+    "target": "ES2022",                  // JavaScript moderno soportado por Node.js 18+
+    "module": "NodeNext",                // ESM nativo de Node.js
+    "moduleResolution": "NodeNext",      // Resolución de módulos estilo Node.js (requiere extensión .js en imports)
+    "lib": ["ES2022"],
+
+    // ==== Salida ====
+    "outDir": "./dist",                  // Carpeta de salida para archivos compilados
+    "rootDir": "./src",                  // Carpeta raíz del código fuente
+    "sourceMap": true,                   // Mapas de fuente para depuración
+    "declaration": false,                // No generar .d.ts (no es una librería)
+
+    // ==== Interoperabilidad ====
+    "esModuleInterop": true,             // Permite importar módulos CommonJS con sintaxis ESM
+    "resolveJsonModule": true,           // Permite importar archivos .json
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // ==== Verificación de tipos (estricto) ====
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,              // Error si hay variables sin usar
+    "noUnusedParameters": true,          // Error si hay parámetros sin usar
+    "noImplicitReturns": true,           // Error si una función no retorna en todos los caminos
+    "noFallthroughCasesInSwitch": true,  // Error si un case de switch no tiene break
+
+    // ==== Rendimiento ====
+    "skipLibCheck": true,                // Omite verificación de tipos en archivos .d.ts (más rápido)
+    "incremental": true                  // Compilación incremental (más rápida en rebuilds)
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
