@@ -1,6 +1,7 @@
 import app from './server.js'
 import colors from 'colors';
 import database from './config/database.js';
+import { env } from './config/env.js';
 
 async function connectDB() {
     try {
@@ -14,7 +15,6 @@ async function connectDB() {
 
 await connectDB();
 
-const port = process.env.PORT || 5000;
-app.listen(port,
-    () => console.log( colors.cyan.bold( `REST API en el puerto ${port}`))
+app.listen(env.port,
+    () => console.log(colors.cyan.bold(`REST API en el puerto ${env.port}`))
 )
