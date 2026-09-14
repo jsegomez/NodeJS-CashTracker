@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import app from './server.js'
 import colors from 'colors';
 import database from './config/database.js';

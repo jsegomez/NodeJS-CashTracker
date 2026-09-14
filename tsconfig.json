@@ -17,6 +17,8 @@
     "resolveJsonModule": true,           // Permite importar archivos .json
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
 
     // ==== Verificación de tipos (estricto) ====
     "noImplicitAny": true,
@@ -29,6 +31,8 @@
     // ==== Rendimiento ====
     "skipLibCheck": true,                // Omite verificación de tipos en archivos .d.ts (más rápido)
     "incremental": true                  // Compilación incremental (más rápida en rebuilds)
+
+    
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
