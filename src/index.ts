@@ -7,6 +7,9 @@ import { env } from './config/env.js';
 async function connectDB() {
     try {
         await database.authenticate();
+        if (env.nodeEnv === "development") {
+            await database.sync({ alter: true });
+        }
         console.log(colors.blue.bold('Conexión exitosa a la base de datos'));
     } catch (error) {
         console.error(colors.red.bold('No se pudo conectar a la base de datos'));
